@@ -32,7 +32,7 @@ const createCommentCtrl = expressAsyncHandler(async (req, res) => {
 
 const fetchAllCommentsCtrl = expressAsyncHandler(async (req, res) => {
   try {
-    const comments = await Comment.find({}).sort("-created");
+    const comments = await Comment.find({}).sort("-created"); //newest first
     res.json(comments);
   } catch (error) {
     res.json(error);

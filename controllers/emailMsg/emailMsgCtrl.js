@@ -19,7 +19,7 @@ const sendEmailMsgCtrl = expressAsyncHandler(async (req, res) => {
       to,
       subject,
       text: message,
-      from: "twentekghana@gmail.com",
+      from: "abdulsalamquadri999@gmail.com",
     };
     //send msg
     await sgMail.send(msg);
