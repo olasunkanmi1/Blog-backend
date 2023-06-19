@@ -235,7 +235,7 @@ const toggleAddDislikeToPostCtrl = expressAsyncHandler(async (req, res) => {
   );
   //Remove this user from likes array if it exists
   if (alreadyLiked) {
-    const post = await Post.findOneAndUpdate(
+    const post = await Post.findByIdAndUpdate(
       postId,
       {
         $pull: { likes: loginUserId },
